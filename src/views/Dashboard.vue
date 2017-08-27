@@ -13,7 +13,7 @@
 
 <script>
 import addproduct from './Products/add-product'
-// import productdelete from './Product/product-delete'
+// import productdelete from './Products/product-delete'
 // import productedit from './Product/product-edit'
 // import productlist from './Product/product-list'
 // import product from './Product/product'

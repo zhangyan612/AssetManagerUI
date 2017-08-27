@@ -16,12 +16,11 @@
 export default {
   name: 'product-delete',
   data: function () {
-    return {product: findProduct(this.$route.params.product_id)};
+    return {product: findProduct(this.$route.params.product_id)}
   },
   methods: {
     deleteProduct: function () {
-      products.splice(findProductKey(this.$route.params.product_id), 1);
-      router.push('/');
+      products.splice(findProductKey(this.$route.params.product_id), 1)
     }
   }
 };
