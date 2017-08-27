@@ -43,20 +43,19 @@
 
 
 <script type="text/javascript">
-// var List = Vue.extend({
-//   template: '#product-list',
+import { getProducts } from '../../api'
+var products = getProducts()
 export default {
   name: 'product-list',
   data: function () {
-    return {products: products, searchKey: ''};
+    return {products: products, searchKey: ''}
   },
   computed: {
     filteredProducts: function () {
       return this.products.filter(function (product) {
-        return this.searchKey=='' || product.name.indexOf(this.searchKey) !== -1;
-      },this);
+        return this.searchKey === '' || product.name.indexOf(this.searchKey) !== -1
+      }, this)
     }
   }
-};
-//);
+}
 </script>

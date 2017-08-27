@@ -11,6 +11,9 @@
 
 
 <script type="text/javascript">
+import { getProducts } from '../../api'
+var products = getProducts()
+
 // var ProductDelete = Vue.extend({
 //   template: '#product-delete',
 export default {

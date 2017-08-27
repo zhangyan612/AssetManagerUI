@@ -7,6 +7,9 @@ import Full from '@/containers/Full'
 // Views
 import Dashboard from '@/views/Dashboard'
 
+// Views - Components
+import Forms from '@/views/components/Forms'
+
 Vue.use(Router)
 
 export default new Router({
@@ -24,8 +27,22 @@ export default new Router({
           path: 'dashboard',
           name: 'Dashboard',
           component: Dashboard
+        },
+        {
+          path: 'components',
+          redirect: '/components/forms',
+          name: 'Components',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'forms',
+              name: 'Forms',
+              component: Forms
+            }
+          ]
         }
-
       ]
     }
   ]
